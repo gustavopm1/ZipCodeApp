@@ -10,13 +10,12 @@ import lombok.NoArgsConstructor;
 public class Address {
 
     private String cep;
-    private String tipoCep;
-    private String subTipoCep;
-    private String uf;
-    private String cidade;
-    private String bairro;
-    private String endereco;
+    private String logradouro;
     private String complemento;
-    private String codigoIBGE;
+    private String unidade;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private String ibge;
 
 }
