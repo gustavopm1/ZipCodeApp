@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zipcode
+    version: 0.0.1
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+

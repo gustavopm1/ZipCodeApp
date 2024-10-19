@@ -14,14 +14,12 @@ public class AddressController {
     @Autowired
     private final AddressService addressService;
 
-    // Constructor
     public AddressController(AddressService addressService) {
         this.addressService = addressService;
     }
 
     @GetMapping("/address/{cep}")
     public Mono<Address> getZipCodeDetails(@PathVariable String cep) {
-        // Calls the service to fetch the Address details
         return addressService.getAddressByCep(cep);
     }
 }
