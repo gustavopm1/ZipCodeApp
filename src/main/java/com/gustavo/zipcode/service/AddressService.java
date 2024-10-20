@@ -2,6 +2,8 @@ package com.gustavo.zipcode.service;
 
 import com.gustavo.zipcode.exception.AddressNotFoundException;
 import com.gustavo.zipcode.model.Address;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -9,13 +11,15 @@ import reactor.core.publisher.Mono;
 @Service
 public class AddressService {
 
-    private final WebClient webClient;
-    private final AddressLogService addressLogService; // Inject the logging service
 
-    // Constructor injection for WebClient with the base URL of the external API
-    public AddressService(WebClient.Builder webClientBuilder, AddressLogService addressLogService) {
-        this.webClient = webClientBuilder.baseUrl("https://opencep.com/v1").build();
-        this.addressLogService = addressLogService; // Initialize the logging service
+    private final WebClient webClient;
+    private final AddressLogService addressLogService;
+
+    // Constructor injection for WebClient and AddressLogService
+    @Autowired
+    public AddressService(WebClient.Builder webClientBuilder, AddressLogService addressLogService, @Value("${cep.baseUrl}") String baseUrl) {
+        this.webClient = webClientBuilder.baseUrl(baseUrl).build(); // Default base URL
+        this.addressLogService = addressLogService;
     }
 
     public Mono<Address> getAddressByCep(String cep) {
