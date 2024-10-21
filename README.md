@@ -21,3 +21,8 @@ The Zipcode API project is a reactive web application built with Spring Boot tha
 ## Getting Started
 
 To get started with the Zipcode API project, clone the repository and follow the instructions in the installation section to set up the application locally.
+
+## Sequence Diagram
+
+Here's a diagram about how the flow works for getting an Address with the CEP:
+![Get Address](http://www.plantuml.com/plantuml/png/ZP31JW8n48RlVOe99ptWek54Z0499Xe26E83rEu0cynkIsUA6kExssvTmoOUt5lxVVt_dPcoQ2-X9gMDM0ylZ1uqGr0ktbUcSheHcDj6l2NAp40FpihI8_CM_Qaoc0J-Yo_j_aoXlhDssCpHBTu5VQDfjdbCaZMgrA9VDIDiBCi-vcoVbmavFf8ACBm3Cm6Fnu0iC2XqxYe-3RglWJ99u0aOJGGroi6Mi4Vv-QFxZrXv4SrBnKcqCUeWudXI5DPX4ycLiNLnkivvIfC01sEGUHSefZ8gY1_3xR1zVJCQTUF2qtQzKaYCC1wDORxOG6C5TZOqvVdB__JsEhgqLKnxI6ajDWbpIzjpIETiAuoD-SjpKlHOd_1tRsd9YbgMzfffDqXBuQq0gUeewzgfhgmtQjVOkvp6xb3JDm00)
