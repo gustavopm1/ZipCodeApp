@@ -12,7 +12,7 @@ The Zipcode API project is a reactive web application built with Spring Boot tha
 
 ## Technologies Used
 
-- **Java 17**: The primary programming language for the application.
+- **Java 17**: The primary programming language for the application.mvn
 - **Spring Boot**: Framework for building the application with ease and efficiency.
 - **Project Reactor**: Library for building reactive applications.
 - **WireMock**: Tool for mocking HTTP APIs during testing.
