@@ -11,14 +11,14 @@ c -> s: call method getAddressByCep(cep)
 s -> oc: https://opencep.com/v1/{cep}
 alt successful case
     s <- oc: 200 Address JSON
+    s -> ls: save request data
+    ls -> psql: save Address data w/ timestamp
+    c <- s: Address JSON
+    u <- c: Address JSON
 else 404 CEP not found case
-    s -> oc: https://opencep.com/v1/{cep}
     s <- oc: 404 CEP Not Found
     c <- s: 404
     u <- c: 404
 end       
-s -> ls: save request data
-ls -> psql: save Address data w/ timestamp
-c <- s: Address JSON
-u <- c: Address JSON
+
 @enduml
